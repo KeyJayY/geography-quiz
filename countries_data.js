@@ -380,6 +380,7 @@ const countries_data = [
 	},
 	{
 			"name": "United States Minor Outlying Islands",
+			"capital": "Washington D.C.",
 			"languages": [
 					"English"
 			],
@@ -1513,6 +1514,7 @@ const countries_data = [
 					"Chinese",
 					"Portuguese"
 			],
+			"capital": "Macao",
 			"population": 649342,
 			"flag": "https://flagcdn.com/mo.svg",
 			"region": "Asia",

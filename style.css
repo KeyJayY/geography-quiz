@@ -9,23 +9,92 @@ body{
     text-align: center;
     color: white;
     height: 60px;
-    align-items: center;
     font-size: 60px;
-    align-items: center;
     padding: 12px 0 24px 0;
 }
 #quiz{
     text-align: center;
-    position: relative;
-    height: 180px;
-    padding: 60px 0;
+    margin: auto;
+    width: 700px;
+    height: 600px;
+    padding: 50px 0;
 }
 button{
+    position: relative;
+    top: 50px;
     width: 320px;
     height: 180px;
     border-radius: 40px;
     background-color: #2e5e2e;
+    margin: auto;
     color: white;
     font-weight: 600;
     font-size: 40px;
+}
+.task{
+    background-color: #222222;
+    color: #DDDDDD;
+    height: 100px;
+    width: 700px;
+    margin: auto;
+    float: left;
+    font-weight: 600;
+    padding: 130px 0;
+    font-size: 50px;
+}
+.ans1{
+    background-color: blanchedalmond;
+    height: 40px;
+    padding: 30px 0;
+    font-size: 30px;
+    width: 310px;
+    float: left;
+    border: 2px solid #222222;
+    margin: 15px;
+    cursor: pointer;
+
+}
+.ans2{
+    background-color: blanchedalmond;
+    height: 40px;
+    padding: 30px 0;
+    font-size: 30px;
+    width: 310px;
+    float: right;
+    border: 2px solid #222222;
+    margin: 15px;
+    cursor: pointer;
+
+}
+.ans3{
+    background-color: blanchedalmond;
+    height: 40px;
+    padding: 30px 0;
+    font-size: 30px;
+    width: 310px;
+    float: left;
+    clear: both;
+    border: 2px solid #222222;
+    margin: 15px;
+    cursor: pointer;
+
+}
+.ans4{
+    background-color: blanchedalmond;
+    height: 40px;
+    padding: 30px 0;
+    font-size: 30px;
+    width: 310px;
+    float: right;
+    border: 2px solid #222222;
+    margin: 15px;
+    cursor: pointer;
+}
+.correct{
+    background-color: green;
+    pointer-events:none !important;
+}
+.wrong{
+    background-color: red;
+    pointer-events:none !important;
 }
