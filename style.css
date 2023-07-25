@@ -13,13 +13,7 @@ body{
     font-size: 50px;
     padding: 12px 0 24px 0;
 }
-#quiz{
-    text-align: center;
-    margin: auto;
-    width: 700px;
-    height: 580px;
-    padding: 30px 0 0 0;
-}
+/* inputs */
 button{
     position: relative;
     top: 50px;
@@ -31,6 +25,26 @@ button{
     color: white;
     font-weight: 600;
     font-size: 40px;
+}
+select{
+    height: 100px;
+    width: 340px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #2C5F2D;
+    color: white;
+    margin-top: 15px;
+}
+select:focus{
+    border: none;
+}
+#quiz{
+    text-align: center;
+    margin: auto;
+    width: 700px;
+    height: 580px;
+    padding: 30px 0 0 0;
 }
 .task{
     background-image: url("bg2.jpg");
@@ -47,6 +61,7 @@ button{
     -moz-box-shadow: 0px 0px 70px 10px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 70px 10px rgba(0, 0, 0, 1);
 }
+/* answer tiles */
 .ans1{
     background-color: #FFE77A;
     height: 85px;
@@ -117,6 +132,7 @@ button{
     -moz-box-shadow: 0px 0px 30px -5px red;
     box-shadow: 0px 0px 30px -5px red;
 }
+/* answer tiles hovers */
 .ans1:hover{
     background-color: #FFE77A;
     height: 85px;
@@ -185,19 +201,7 @@ button{
 .disb{
     pointer-events:none !important;
 }
-select{
-    height: 100px;
-    width: 340px;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-    background-color: #2C5F2D;
-    color: white;
-    margin-top: 15px;
-}
-select:focus{
-    border: none;
-}
+/* flags */
 .flag{
     max-height: 150px;
 }
