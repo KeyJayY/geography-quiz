@@ -7,43 +7,47 @@ body{
 .header{
     background-color:#2C5F2D;
     font-weight: 900;
-    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     color: white;
-    height: 50px;
+    height: 80px;
     font-size: 50px;
-    padding: 12px 0 24px 0;
 }
 /* inputs */
 button{
-    position: relative;
-    top: 50px;
-    width: 320px;
-    height: 180px;
+    width: 80%;
+    height: 4em;
     border-radius: 40px;
     background-color: #2C5F2D;
     margin: auto;
+    margin-top: 20px;
     color: white;
     font-weight: 600;
     font-size: 40px;
 }
 select{
     height: 100px;
-    width: 340px;
+    width: 47%;
     font-size: 50px;
     text-align: center;
     font-weight: 600;
     background-color: #2C5F2D;
     color: white;
-    margin-top: 15px;
+    margin: 15px 7.5px;
 }
 select:focus{
     border: none;
 }
 #quiz{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    align-items: center;
+    justify-content: center;  
     margin: auto;
     width: 700px;
-    height: 580px;
+    height: 100%;
     padding: 30px 0 0 0;
 }
 .task{
@@ -66,13 +70,13 @@ select:focus{
     background-color: #FFE77A;
     height: 85px;
     font-size: 25px;
-    width: 310px;
+    width: 46%;
     display: grid;
     align-items: center;
     justify-items: center;
-    float: left;
     border: 2px solid #222222;
-    margin: 15px;
+    margin: auto;
+    margin-top: 15px;
     cursor: pointer;
 
 }
@@ -80,13 +84,13 @@ select:focus{
     background-color: #FFE77A;
     height: 85px;
     font-size: 25px;
-    width: 310px;
+    width: 46%;
     display: grid;
     align-items: center;
     justify-items: center;
-    float: right;
     border: 2px solid #222222;
-    margin: 15px;
+    margin: auto;
+    margin-top: 15px;
     cursor: pointer;
 
 }
@@ -94,14 +98,13 @@ select:focus{
     background-color: #FFE77A;
     height: 85px;
     font-size: 25px;
-    width: 310px;
+    width: 46%;
     display: grid;
     align-items: center;
     justify-items: center;
-    float: left;
-    clear: both;
     border: 2px solid #222222;
-    margin: 15px;
+    margin: auto;
+    margin-top: 15px;
     cursor: pointer;
 
 }
@@ -109,13 +112,13 @@ select:focus{
     background-color: #FFE77A;
     height: 85px;
     font-size: 25px;
-    width: 310px;
+    width: 46%;
     display: grid;
     align-items: center;
     justify-items: center;
-    float: right;
     border: 2px solid #222222;
-    margin: 15px;
+    margin: auto;
+    margin-top: 15px;
     cursor: pointer;
 }
 .correct{
@@ -134,66 +137,21 @@ select:focus{
 }
 /* answer tiles hovers */
 .ans1:hover{
-    background-color: #FFE77A;
-    height: 85px;
-    font-size: 25px;
-    width: 310px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    float: left;
-    border: 2px solid #222222;
-    margin: 15px;
-    cursor: pointer;
     -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
 }   
 .ans2:hover{
-    background-color: #FFE77A;
-    height: 85px;
-    font-size: 25px;
-    width: 310px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    float: right;
-    border: 2px solid #222222;
-    margin: 15px;
-    cursor: pointer;
     -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
 }   
 .ans3:hover{
-    background-color: #FFE77A;
-    height: 85px;
-    font-size: 25px;
-    width: 310px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    float: left;
-    clear: both;
-    border: 2px solid #222222;
-    margin: 15px;
-    cursor: pointer;
     -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
 }
 .ans4:hover{
-    background-color: #FFE77A;
-    height: 85px;
-    font-size: 25px;
-    width: 310px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    float: right;
-    border: 2px solid #222222;
-    margin: 15px;
-    cursor: pointer;
     -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
     box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
@@ -207,4 +165,28 @@ select:focus{
 }
 .flag2{
     max-height: 85px;
+}
+
+@media (max-width: 700px){
+    .task{
+        width: 98%;
+    }
+    #quiz{
+        width: 98%;
+    }
+    select{
+        width: 98%;
+    }
+    .ans1{
+        width: 98%;
+    }
+    .ans2{
+        width: 98%;
+    }
+    .ans3{
+        width: 98%; 
+    }
+    .ans4{
+        width: 98%;
+    }
 }
