@@ -92,17 +92,6 @@ const countries_data = [
 			"area": 91
 	},
 	{
-			"name": "Antarctica",
-			"languages": [
-					"English",
-					"Russian"
-			],
-			"population": 1000,
-			"flag": "https://flagcdn.com/aq.svg",
-			"region": "Polar",
-			"area": 14000000
-	},
-	{
 			"name": "Antigua and Barbuda",
 			"capital": "Saint John's",
 			"languages": [

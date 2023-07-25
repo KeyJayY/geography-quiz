@@ -26,7 +26,7 @@ function initgame() {
     while(chosen.length!=10)
     {
         let rand = Math.floor(Math.random()*countries_data.length)
-        if(!chosen.includes())
+        if(!chosen.includes(rand))
             chosen.push(rand);
     }
     nextround();
@@ -66,12 +66,20 @@ function nextround() {
             document.querySelector(".ans"+i).addEventListener("click", function() {
                 document.querySelector(".ans"+i).classList.add("wrong");
                 document.querySelector(".ans"+correct).classList.add("correct");
+                document.querySelector(".ans1").classList.add("disb");
+                document.querySelector(".ans2").classList.add("disb");
+                document.querySelector(".ans3").classList.add("disb");
+                document.querySelector(".ans4").classList.add("disb");
                 round++;
                 setTimeout(nextround, 1500);
             });
         else
             document.querySelector(".ans"+i).addEventListener("click", function() {
                 document.querySelector(".ans"+correct).classList.add("correct");
+                document.querySelector(".ans1").classList.add("disb");
+                document.querySelector(".ans2").classList.add("disb");
+                document.querySelector(".ans3").classList.add("disb");
+                document.querySelector(".ans4").classList.add("disb");
                 round++;
                 points++;
                 setTimeout(nextround, 1000);
@@ -87,7 +95,7 @@ function end_game() {
         board.removeChild(document.querySelector(".ans"+i));
     let elem = document.createElement("div");
     elem = document.querySelector(".task");
-    elem.innerHTML="Congratulations you got "+points+" answers correct!";
+    elem.innerHTML="Congratulations you've got "+points+" out of 10 answers correct!";
     board.appendChild(elem);
     elem = document.createElement("button");
     elem.addEventListener("click", initgame);
