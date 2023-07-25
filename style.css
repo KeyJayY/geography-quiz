@@ -34,13 +34,14 @@ button{
 }
 .task{
     background-image: url("bg2.jpg");
+    display: grid;
+    align-items: center;
+    justify-items: center;
     color: #DDDDDD;
-    min-height: 100px;
+    min-height: 340px;
     width: 700px;
     margin: auto;
-    float: left;
     font-weight: 600;
-    padding: 120px 0;
     font-size: 45px;
     -webkit-box-shadow: 0px 0px 70px 10px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 0px 70px 10px rgba(0, 0, 0, 1);
@@ -48,10 +49,12 @@ button{
 }
 .ans1{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: left;
     border: 2px solid #222222;
     margin: 15px;
@@ -60,10 +63,12 @@ button{
 }
 .ans2{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: right;
     border: 2px solid #222222;
     margin: 15px;
@@ -72,10 +77,12 @@ button{
 }
 .ans3{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: left;
     clear: both;
     border: 2px solid #222222;
@@ -85,10 +92,12 @@ button{
 }
 .ans4{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: right;
     border: 2px solid #222222;
     margin: 15px;
@@ -110,10 +119,12 @@ button{
 }
 .ans1:hover{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: left;
     border: 2px solid #222222;
     margin: 15px;
@@ -124,10 +135,12 @@ button{
 }   
 .ans2:hover{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: right;
     border: 2px solid #222222;
     margin: 15px;
@@ -138,10 +151,12 @@ button{
 }   
 .ans3:hover{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: left;
     clear: both;
     border: 2px solid #222222;
@@ -153,10 +168,12 @@ button{
 }
 .ans4:hover{
     background-color: #FFE77A;
-    height: 35px;
-    padding: 25px 0;
+    height: 85px;
     font-size: 25px;
     width: 310px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     float: right;
     border: 2px solid #222222;
     margin: 15px;
@@ -167,4 +184,23 @@ button{
 }   
 .disb{
     pointer-events:none !important;
+}
+select{
+    height: 100px;
+    width: 340px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #2C5F2D;
+    color: white;
+    margin-top: 15px;
+}
+select:focus{
+    border: none;
+}
+.flag{
+    max-height: 150px;
+}
+.flag2{
+    max-height: 85px;
 }

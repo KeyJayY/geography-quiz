@@ -1,6 +1,8 @@
 let round = 0;
 let chosen = new Array;
 let points = 0;
+let modet = 'name';
+let modea = 'capital';
 
 document.getElementById("btn").addEventListener("click", initgame);
 
@@ -14,7 +16,11 @@ function initgame() {
     }
     round = 0;
     points = 0;
+    modea = document.querySelector("#modea").value;
+    modet = document.querySelector("#modet").value;
     board.removeChild(document.getElementById("btn"));
+    board.removeChild(document.querySelector("#modet"));
+    board.removeChild(document.querySelector("#modea"));
     let elem = document.createElement("div");
     elem.classList.add("task");
     board.appendChild(elem);
@@ -41,13 +47,21 @@ function board_prepare(){
         elem.classList.add("ans"+i);
         board.appendChild(elem);
     }
+    while(document.querySelector(".task").hasChildNodes())
+    document.querySelector(".task").removeChild(document.querySelector(".task").firstChild)
 }
 
 function nextround() {
     if(round>9)
         end_game();
     board_prepare();
-    document.querySelector(".task").innerHTML=countries_data[chosen[round]].name;
+    if(modet=='flag'){        
+        let elem = document.createElement("img");
+        elem.src=countries_data[chosen[round]][modet];
+        elem.classList.add("flag");
+        document.querySelector(".task").appendChild(elem);
+    } else
+        document.querySelector(".task").innerHTML=countries_data[chosen[round]][modet];
     let correct = Math.floor(Math.random()*3+1);
     let wrong = new Array;
     while(wrong.length!=4)
@@ -56,10 +70,20 @@ function nextround() {
         if(!wrong.includes() && rand!=chosen[round])
             wrong.push(rand);
     }
-    console.log(wrong);
-    for(let i=1; i<5; i++)
-        document.querySelector(".ans"+i).innerHTML=countries_data[wrong[i-1]].capital;
-    document.querySelector(".ans"+correct).innerHTML=countries_data[chosen[round]].capital;
+
+    for(let i=1; i<5; i++){
+        if(modea=='flag'){
+            let elem = document.createElement("img");
+            elem.src=countries_data[wrong[i-1]][modea];
+            elem.classList.add("flag2");
+            document.querySelector(".ans"+i).appendChild(elem);
+        } else
+            document.querySelector(".ans"+i).innerHTML=countries_data[wrong[i-1]][modea];
+    }
+    if(modea=='flag')
+        document.querySelector(".ans"+correct).firstChild.src=countries_data[chosen[round]][modea]
+    else
+        document.querySelector(".ans"+correct).innerHTML=countries_data[chosen[round]][modea];
     for(let i=1; i<5; i++)
     {
         if(i!=correct)
@@ -97,6 +121,66 @@ function end_game() {
     elem = document.querySelector(".task");
     elem.innerHTML="Congratulations you've got "+points+" out of 10 answers correct!";
     board.appendChild(elem);
+    elem = document.createElement("select");
+
+    let opt = document.createElement("option");
+    opt.value="name";
+    opt.innerHTML="Country";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="capital";
+    opt.innerHTML="Capital";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="flag";
+    opt.innerHTML="Flag";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="population";
+    opt.innerHTML="Population";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="area";
+    opt.innerHTML="Area";
+    elem.appendChild(opt);
+    
+    elem.setAttribute("id", "modet")
+    board.appendChild(elem);
+
+    elem = document.createElement("select");
+    
+    opt = document.createElement("option");
+    opt.value="name";
+    opt.innerHTML="Country";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="capital";
+    opt.innerHTML="Capital";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="flag";
+    opt.innerHTML="Flag";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="population";
+    opt.innerHTML="Population";
+    elem.appendChild(opt);
+
+    opt = document.createElement("option");
+    opt.value="area";
+    opt.innerHTML="Area";
+    elem.appendChild(opt);
+
+    elem.setAttribute("id", "modea")
+    board.appendChild(elem);
+
     elem = document.createElement("button");
     elem.addEventListener("click", initgame);
     elem.setAttribute("id", "btn");
