@@ -232,3 +232,41 @@ function end_game() {
     elem.innerHTML = "Play again";
     board.appendChild(elem);
 }
+
+
+// functions for dictionary
+
+// setting all tiles
+function setTiles(){
+    board = document.querySelector(".countries");
+    for(let i=0; i<countries_data.length; i++){
+        const elem = document.createElement("div");
+        elem.setAttribute("id", "t" + i.toString());
+        elem.setAttribute("class", "countrytile");
+
+        elem.innerHTML = '<img class="flagtile" src="'+ countries_data[i].flag +'"></img><br>Name: ' + countries_data[i].name +'<br>Capital: ' + countries_data[i].capital;
+
+        if("population" in countries_data[i])
+            elem.innerHTML += '<br>Population: ' + countries_data[i].population.toLocaleString("en-US");
+        else
+            elem.innerHTML += '<br>Population: -';
+
+        if("area" in countries_data[i])
+            elem.innerHTML += '<br>Area: ' + countries_data[i].area.toLocaleString("en-US");
+        else
+            elem.innerHTML += '<br>Area: -';
+        board.appendChild(elem);
+        
+    }
+}
+
+// searching for exact result
+function search(){
+    let bar = document.querySelector("#search");
+    for(let i=0; i<countries_data.length; i++){
+        if(!countries_data[i].name.toUpperCase().includes(bar.value.toUpperCase()))
+            document.querySelector("#t"+i.toString()).style.display = "none";
+        else
+            document.querySelector("#t"+i.toString()).style.display = "block";
+    }
+}

@@ -334,18 +334,6 @@ const countries_data = [
 			"area": 582000
 	},
 	{
-			"name": "Bouvet Island",
-			"languages": [
-					"Norwegian",
-					"Norwegian Bokmål",
-					"Norwegian Nynorsk"
-			],
-			"population": 0,
-			"flag": "https://flagcdn.com/bv.svg",
-			"region": "Antarctic Ocean",
-			"area": 49
-	},
-	{
 			"name": "Brazil",
 			"capital": "Brasília",
 			"languages": [
@@ -1117,16 +1105,6 @@ const countries_data = [
 			"flag": "https://flagcdn.com/ht.svg",
 			"region": "Americas",
 			"area": 27750
-	},
-	{
-			"name": "Heard Island and McDonald Islands",
-			"languages": [
-					"English"
-			],
-			"population": 0,
-			"flag": "https://flagcdn.com/hm.svg",
-			"region": "Antarctic",
-			"area": 412
 	},
 	{
 			"name": "Vatican City",
