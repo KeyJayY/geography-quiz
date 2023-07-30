@@ -5,8 +5,6 @@ let points = 0;
 let modet = 'name';
 let modea = 'capital';
 
-document.getElementById("btn").addEventListener("click", initgame);
-
 // initializing game
 function initgame() {
     let board = document.getElementById("quiz");
